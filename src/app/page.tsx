@@ -1,12 +1,12 @@
 import ProductList from "@/components/ProductList";
 import Image from "next/image";
 
-const Homepage = async ({
+const Homepage = ({
   searchParams,
 }: {
-  searchParams: Promise<{ category: string }>;
+  searchParams?: { category?: string };
 }) => {
-  const category = (await searchParams).category;
+  const category = searchParams?.category;
   return (
     <div className="">
       <div className="relative aspect-[3/1] mb-12">
